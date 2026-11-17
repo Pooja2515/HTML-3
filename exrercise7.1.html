@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10d - Friend Cards</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .friends-container {
+            width: 600px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .friend-card {
+            width: 180px;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .friend-image {
+            width: 100%;
+            height: 180px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .friend-details {
+            padding: 8px;
+        }
+
+        .friend-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .mutual-friends {
+            margin-bottom: 8px;
+        }
+
+        .mutual-friends img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .mutual-friends p {
+            display: inline-block;
+            vertical-align: middle;
+            color: gray;
+            font-size: 14px;
+            margin-left: 4px;
+        }
+
+        .add-friend-button {
+            background-color: #3978e8;
+            color: white;
+            border: none;
+            padding: 9px 17px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="friends-container">
+
+        <!-- Oliver Card -->
+
+        <div class="friend-card">
+
+            <img
+                class="friend-image"
+                src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=400"
+                alt="Oliver">
+
+            <div class="friend-details">
+
+                <p class="friend-name">Oliver</p>
+
+                <div class="mutual-friends">
+                    <img
+                        src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=100"
+                        alt="Mutual friend">
+
+                    <p>2 mutual friends</p>
+                </div>
+
+                <button class="add-friend-button">Add Friend</button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Mimi Card -->
+
+        <div class="friend-card">
+
+            <img
+                class="friend-image"
+                src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400"
+                alt="Mimi">
+
+            <div class="friend-details">
+
+                <p class="friend-name">Mimi</p>
+
+                <div class="mutual-friends">
+                    <img
+                        src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=100"
+                        alt="Mutual friend">
+
+                    <p>3 mutual friends</p>
+                </div>
+
+                <button class="add-friend-button">Add Friend</button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Rex Card -->
+
+        <div class="friend-card">
+
+            <img
+                class="friend-image"
+                src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400"
+                alt="Rex">
+
+            <div class="friend-details">
+
+                <p class="friend-name">Rex</p>
+
+                <div class="mutual-friends">
+                    <img
+                        src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=100"
+                        alt="Mutual friend">
+
+                    <p>4 mutual friends</p>
+                </div>
+
+                <button class="add-friend-button">Add Friend</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

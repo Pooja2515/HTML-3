@@ -1,0 +1,478 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Layouts - Exercise 10a</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 500px;
+            padding: 15px;
+        }
+
+        .profile-image-container {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-details {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 8px;
+        }
+
+        .profile-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .profile-description {
+            font-size: 20px;
+            color: gray;
+        }
+
+        .profile-status {
+            font-size: 18px;
+            color: gray;
+        }
+
+        .follow-button {
+            background-color: #4185e9;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 18px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-container">
+
+        <div class="profile-image-container">
+            <img
+                class="profile-image"
+                src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=200"
+                alt="Oliver the cat">
+        </div>
+
+        <div class="profile-details">
+            <p class="profile-name">oliver</p>
+            <p class="profile-description">the cat</p>
+            <p class="profile-status">Popular</p>
+        </div>
+
+        <button class="follow-button">Follow</button>
+
+    </div>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Layouts - Exercises 10b and 10c</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 30px;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .exercise {
+            width: 480px;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* Exercise 10b */
+
+        .profiles-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: white;
+            padding: 15px;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .profile-left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .profile-image {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-details {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .profile-name {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .profile-description {
+            font-size: 19px;
+            color: gray;
+        }
+
+        .profile-status {
+            font-size: 16px;
+            color: gray;
+        }
+
+        .follow-button {
+            background-color: #4285ed;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 15px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Exercise 10c */
+
+        .videos-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .video {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .video-thumbnail {
+            width: 210px;
+            height: 118px;
+            flex-shrink: 0;
+            background-color: #222;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-title-image {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 21px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        .video-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .video-title {
+            font-size: 17px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        .channel-name {
+            font-size: 15px;
+            color: #666;
+        }
+
+        .video-info {
+            font-size: 15px;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .exercise {
+                width: 100%;
+            }
+
+            .video-thumbnail {
+                width: 45%;
+                height: 100px;
+            }
+
+            .video-title {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- Exercise 10b -->
+
+        <div class="exercise">
+
+            <h2 class="heading">10b. Draw the layout</h2>
+
+            <div class="profiles-container">
+
+                <!-- Profile 1 -->
+
+                <div class="profile">
+
+                    <div class="profile-left">
+
+                        <img
+                            class="profile-image"
+                            src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=200"
+                            alt="Oliver">
+
+                        <div class="profile-details">
+                            <p class="profile-name">oliver</p>
+                            <p class="profile-description">the cat</p>
+                            <p class="profile-status">Popular</p>
+                        </div>
+
+                    </div>
+
+                    <button class="follow-button">Follow</button>
+
+                </div>
+
+                <!-- Profile 2 -->
+
+                <div class="profile">
+
+                    <div class="profile-left">
+
+                        <img
+                            class="profile-image"
+                            src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=200"
+                            alt="Mimi">
+
+                        <div class="profile-details">
+                            <p class="profile-name">Mimi</p>
+                            <p class="profile-description">Sleepy Cat</p>
+                            <p class="profile-status">Popular</p>
+                        </div>
+
+                    </div>
+
+                    <button class="follow-button">Follow</button>
+
+                </div>
+
+                <!-- Profile 3 -->
+
+                <div class="profile">
+
+                    <div class="profile-left">
+
+                        <img
+                            class="profile-image"
+                            src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=200"
+                            alt="Rex">
+
+                        <div class="profile-details">
+                            <p class="profile-name">Rex</p>
+                            <p class="profile-description">Happy Bulldog</p>
+                            <p class="profile-status">Popular</p>
+                        </div>
+
+                    </div>
+
+                    <button class="follow-button">Follow</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Exercise 10c -->
+
+        <div class="exercise">
+
+            <h2 class="heading">10c. Draw the layout</h2>
+
+            <div class="videos-container">
+
+                <!-- Video 1 -->
+
+                <div class="video">
+
+                    <div class="video-thumbnail">
+                        <img
+                            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400"
+                            alt="Self taught developer">
+
+                        <span class="video-title-image">SELF-TAUGHT</span>
+                    </div>
+
+                    <div class="video-details">
+                        <p class="video-title">
+                            How to compete against CS degrees (as a self-taught dev)
+                        </p>
+
+                        <p class="channel-name">SuperSimpleDev</p>
+
+                        <p class="video-info">
+                            1.5K views · 4 months ago
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Video 2 -->
+
+                <div class="video">
+
+                    <div class="video-thumbnail">
+                        <img
+                            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400"
+                            alt="Programming languages">
+
+                        <span class="video-title-image">Which Language?</span>
+                    </div>
+
+                    <div class="video-details">
+                        <p class="video-title">
+                            Which programming language to learn first 2022 (with charts)
+                        </p>
+
+                        <p class="channel-name">SuperSimpleDev</p>
+
+                        <p class="video-info">
+                            5.7K views · 11 months ago
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Video 3 -->
+
+                <div class="video">
+
+                    <div class="video-thumbnail">
+                        <img
+                            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400"
+                            alt="Frontend development">
+
+                        <span class="video-title-image">What is Frontend?</span>
+                    </div>
+
+                    <div class="video-details">
+                        <p class="video-title">
+                            Frontend web development - a complete overview (2021)
+                        </p>
+
+                        <p class="channel-name">SuperSimpleDev</p>
+
+                        <p class="video-info">
+                            1K views · 4 months ago
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+

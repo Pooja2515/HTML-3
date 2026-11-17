@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1,.p2{
+            display:block;
+            margin-bottom: 5px;
+        }
+        .p3{
+            display: inline-block;
+            width:200px;
+            vertical-align: middle;
+        }
+        .p4{
+            font-size:16px;
+            width:500px;
+            border-style:none;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 30px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        input{
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(200, 200, 200);
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 16px;
+            padding-right: 16px;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .p7{
+            display: block;
+        }
+        .button1{
+            background-color:rgb(47, 127, 231);
+            color: white;
+            font-size:18px;
+            font-weight:bold;
+            padding-top:14px;
+            padding-bottom: 14px;
+            border:none;
+            width:300px;
+            border-radius: 8px;
+        }
+        .p8{
+            font-family: Arial;
+            font-size:40px;
+            margin-bottom: 25px;
+        }
+        .p9,.p10{
+            display: block;
+            background-color: rgb(240, 240, 240);
+            border: none;
+            margin-bottom: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 16px;
+            width: 400px;
+
+        }
+        .p10{
+            margin-bottom: 35px;
+        }
+        .box1{
+            background-color: black;
+            color: white;
+            border: none;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            font-size: 16px;
+            margin-right: 20px;
+        }
+        .button3{
+            background-color: rgb(240, 240, 240);
+            border: none;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <input class="p1" type="text" placeholder="Name">
+    <input class="p2" type="text" placeholder="Email"><br> <br>
+    <p class="p3"> Thanks for chatting with our customer support. Would you like to take our quick survey?</p>
+    <button>Yes</button>
+    <button>No</button><br> <br>
+    <img src="data:image/png;base64,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" alt="logo">
+    <input class="p4" type="text" placeholder="Search Google or type a URL"><br> <br>
+    <input class="p5" type="text" placeholder="First name">
+    <input class="p6" type="text" placeholder="Last name">
+    <input class="p7" type="text" placeholder="Email">
+    <button class="button1">Sign Up</button><br> <br>
+    <p class="p8">Request a ride now</p>
+    <input type="p9" type="text" placeholder="Enter pickup location">
+    <input type="p10" type="text" placeholder="Enter destination">
+    <button class="box1">Request Now</button>
+    <button class="button3">Schedule for later</button>
+</body>
+</html>
